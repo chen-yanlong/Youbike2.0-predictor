@@ -44,7 +44,7 @@ const StationModal = (props) => {
 
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={props.onHide}>Select</Button>
       </Modal.Footer>
     </Modal>
     </>

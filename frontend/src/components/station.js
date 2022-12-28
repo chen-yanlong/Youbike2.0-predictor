@@ -1,6 +1,6 @@
 
 
-const Station = ({stationName, address, poleNum},id) => {
+const Station = ({stationName, poleNum},id) => {
 
 
   return(
@@ -14,7 +14,6 @@ const Station = ({stationName, address, poleNum},id) => {
 
         <div className="card-body">
           <p className="card-text">{stationName}</p>
-          <p className="card-text">{address}</p>
           <div className="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
