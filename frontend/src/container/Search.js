@@ -40,7 +40,7 @@ return(<html lang='en' className="h-100">
       </main>
 
       <footer className="mt-auto text-white-50">
-        <p>This is a demo of Data Science and Social Inquiry Final Project</p>
+        <p>This is a demo of Data Analysis and Social Inquiry Final Project</p>
       </footer>
 
     </div>
