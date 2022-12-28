@@ -2,5 +2,6 @@
 a final project of Data Science and Social Inquiry
 
 Modules needed:
-* *frontend:*
-yarn add react-router-dom react-head
+*frontend:*
+* yarn install
+* yarn add react-bootstrap bootstrap

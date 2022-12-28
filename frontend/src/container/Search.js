@@ -1,3 +1,5 @@
+import SearchStation from "../components/search-station";
+
 const Search = () => {
 
 return(<html lang='en' className="h-100">
@@ -16,11 +18,11 @@ return(<html lang='en' className="h-100">
       </header>
 
       <main className="px-3">
-        <h1>THIS PAGE IS STILL WORKING (PREDICT PAGE)</h1>
 
-        <p className="lead"></p>
+        <SearchStation/>  
+        <p></p>
         <p className="lead">
-          <button className="btn btn-lg btn-secondary fw-bold border-white bg-white" > Predict </button>
+          <button className="btn btn-lg btn-secondary fw-bold border-white bg-white"> Search</button>
         </p>
       </main>
 
