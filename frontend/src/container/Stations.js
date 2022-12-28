@@ -1,12 +1,15 @@
 import Station from "../components/station"
+import { useSearch } from "./hook/useSearch"
 
 const Stations = () => {
-  const bikeStations = [
-    {stationName:"科技大樓", address:"復興南路", poleNum:5},
-    {stationName:"科技大樓", address:"復興南路", poleNum:5},
-    {stationName:"科技大樓", address:"復興南路", poleNum:5},
-    {stationName:"科技大樓", address:"復興南路", poleNum:5}
-  ] //{ stationName, address, poleNum }
+  const {bikeStations} = useSearch();
+
+  // const bikeStations = [
+  //   {stationName:"科技大樓", address:"復興南路", poleNum:5},
+  //   {stationName:"科技大樓", address:"復興南路", poleNum:5},
+  //   {stationName:"科技大樓", address:"復興南路", poleNum:5},
+  //   {stationName:"科技大樓", address:"復興南路", poleNum:5}
+  // ] //{ stationName, address, poleNum }
 
 
   return(<html lang='en' className="h-100">

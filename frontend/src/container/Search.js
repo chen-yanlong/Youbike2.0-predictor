@@ -1,6 +1,15 @@
 import SearchStation from "../components/search-station";
+import { useSearch } from "./hook/useSearch";
 
 const Search = () => {
+  const {result, setResult} = useSearch();
+
+  const handleSearch = () => {
+    // calculate the bike num
+    //...
+    //let finalResult = 0;
+    //setResult(finalResult)
+  }
 
 return(<html lang='en' className="h-100">
 <body className="d-flex h-100 text-center text-bg-dark">
@@ -22,8 +31,12 @@ return(<html lang='en' className="h-100">
         <SearchStation/>  
         <p></p>
         <p className="lead">
-          <button className="btn btn-lg btn-secondary fw-bold border-white bg-white"> Search</button>
+          <button className="btn btn-lg btn-secondary fw-bold border-white bg-white" onClick={() => handleSearch}> Search</button>
         </p>
+        {
+          result && <div>{`There will be ${result} bike`}</div>
+        }
+        
       </main>
 
       <footer className="mt-auto text-white-50">

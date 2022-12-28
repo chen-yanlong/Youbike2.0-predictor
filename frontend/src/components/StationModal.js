@@ -1,6 +1,13 @@
-import { Modal, Button } from 'react-bootstrap'
+import { Modal, Button, Dropdown} from 'react-bootstrap'
+import { useSearch} from '../container/hook/useSearch'
 
 const StationModal = (props) => {
+  const {station, setStation, bikeStations} = useSearch();
+
+  const handleOnChoose = (station) => {
+    setStation(station);
+  }
+
   return(
     <>
     <Modal
@@ -11,16 +18,30 @@ const StationModal = (props) => {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Which day would you like to choose
+          Which station to get your youbike
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+          {station}
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            {
+              bikeStations.map((station) => {
+                return(
+                  <Dropdown.Item onClick={()=>{handleOnChoose(station.stationName)}}>{station.stationName}</Dropdown.Item>
+                )
+              })
+
+            }
+            
+          </Dropdown.Menu>
+        </Dropdown>
+
+
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
