@@ -1,11 +1,12 @@
 # Youbike prediction
 a final project of Data Science and Social Inquiry
 
-Modules needed:
+### Modules needed:
 *frontend:*
+* $ cd frontend
 * $ yarn install
 * $ yarn add react-bootstrap bootstrap
 
-Run:
+### Run:
 * $ cd frontend 
 * $ yarn start
