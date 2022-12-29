@@ -2,13 +2,15 @@ import SearchStation from "../components/search-station";
 import { useSearch } from "./hook/useSearch";
 
 const Search = () => {
-  const {result, setResult} = useSearch();
+  const {result, setResult, station, bikeStations} = useSearch();
+
 
   const handleSearch = () => {
     // calculate the bike num
     //...
-    //let finalResult = 0;
-    //setResult(finalResult)
+    let poleNum = bikeStations.find(({ stationName }) => stationName == station).poleNum;
+    let finalResult = Math.floor(Math.random()*(poleNum/2+1));
+    setResult(finalResult)
   }
 
 return(<html lang='en' className="h-100">
@@ -31,12 +33,11 @@ return(<html lang='en' className="h-100">
         <SearchStation/>  
         <p></p>
         <p className="lead">
-          <button className="btn btn-lg btn-secondary fw-bold border-white bg-white" onClick={() => handleSearch}> Search</button>
+          <button className="btn btn-lg btn-secondary fw-bold border-white bg-white" onClick={() => handleSearch()}> Search</button>
         </p>
         {
           result && <div>{`There will be ${result} bike`}</div>
         }
-        
       </main>
 
       <footer className="mt-auto text-white-50">
